@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calc() 적용실습</title>
+
+  <style>
+  
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+
+    .container{
+      width: 1170px; height: 250px; padding: 0 15px;
+      margin: 0 auto 50px; border: 1px solid #000;
+    }
+
+    .wrap1>div{
+      width: calc(100%/4); height: 100%; float: left;
+      background-color: #e2e2e2; border: 1px solid #000;
+    }
+
+    .wrap2>div{
+      width: calc(100%/3); height: 100%; float: left;
+      background-color: #e2e2e2; border: 1px solid #000;
+    }
+  
+  </style>
+
+</head>
+<body>
+
+  <div class="container wrap1">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+  </div>
+
+  <div class="container wrap2">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+  
+</body>
+</html>

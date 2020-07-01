@@ -1,0 +1,493 @@
+@charset "utf-8";
+
+@import url(reset.css);
+
+/* ******************* 레이아웃 구성 시작 ******************* */
+body {background-color: #f2f2f2;}
+
+#navi {width: 100%; height: 84px; background-color: #fff; }
+#wrap {width: 100%; height: auto; }
+#wrap>div{width: 100%;}
+
+#mainview {height: 651px;}
+
+#contents {height: auto;}
+#contents>div {width: 100%;}
+#contents>div:nth-child(odd) {background-color: #e9e9e9;}
+#contents .event {height: 357px;}
+#contents .show {height: 420px;}
+#contents .service {height: 525px;}
+#contents .family-group {height: 399px;}
+
+#footer {height: auto;}
+#footer>div {width: 100%;}
+#footer .f-top {height: 189px; background-color: #252525;}
+#footer .f-bottom {height: 63px; background-color: #111;}
+
+.container {width: 1170px; height: 100%; margin: auto;}
+
+/* ******************* 공통영역 선언 시작 ******************* */
+
+/* Button Setting */
+.btn {
+  display: inline-block; 
+  width: 150px; height: 42px;
+  text-align: center; 
+  font: 400 14px/42px 'Nanum Gothic', sans-serif;
+  border: 1px solid #fff;
+  color: #333;
+}
+.btn i { margin-left: 10px; }
+.btn1{color: #fff;}
+.btn1:hover{background-color: #47b4ea;}
+.btn2 { border: 1px solid #000;}
+.btn2:hover{background-color: #76cf4a;}
+
+
+
+
+/* ******************* 개별영역 선언 시작 ******************* */
+/* *************** Navi Area Start *************** */
+#navi {
+  /* background: url(../images/navi_bg.png) repeat-x 0 12px; */
+  box-shadow: 0 5px 8px rgb(200, 200, 200);
+}
+
+/* site logo */
+#navi h1 {width: 170px; height: 84px; float: left; margin-right: 130px; }
+#navi h1 a {
+  background: url(../images/logo.png) no-repeat 0 50%;
+}
+
+
+/* gnb */
+#navi .gnb{ width: 600px; height: 84px; float: left;}
+#navi .gnb li {height: 84px; float: left;}
+#navi .gnb li a {
+  display: block;
+  height: 100%;
+  padding: 0 30px;
+  font: 700 1.1428em/84px 'Nanum Gothic', sans-serif;
+  position: relative;
+}
+#navi .gnb li a::after {
+  content: ''; display: block; width: 100%; height: 3px;
+  position: absolute; left: 0; bottom: 0;
+  /* background-color: #000; */
+}
+#navi .gnb li:nth-child(1) a:hover::after {background-color: #fc0;}
+
+#navi .gnb li:nth-child(2) a:hover::after,
+#navi .gnb li:nth-child(3) a:hover::after {background-color: #52d15a;}
+
+#navi .gnb li:nth-child(4) a:hover::after,
+#navi .gnb li:nth-child(5) a:hover::after {background-color: #47b4ea;}
+
+
+/* login-group */
+#navi .login-group {
+  width: 270px; height: 84px; float: right; text-align: right;
+  font: 700 1.2em/84px 'Nanum Gothic', sans-serif;
+}
+#navi .login-group a { padding: 0 12px; position: relative; }
+#navi .login-group a:hover {color: #c00;}
+#navi .login-group a::after {
+  content:''; display: block; width: 1px; height: 13px;
+  background-color: #888;
+  position: absolute; right: 0; top: 1px;
+}
+#navi .login-group a:last-child{padding: 0 0 0 12px;}
+#navi .login-group a:last-child::after{display: none;}
+
+
+
+
+
+/* *************** wrap Area Start *************** */
+
+/* ******* mainview Area Start ******* */
+#mainview .container>div {width: 100%;}
+
+/* *** slider Area Start *** */
+#mainview .slider-wrap { 
+  height: 504px; position: relative;
+ }
+
+/* pager Start */
+#mainview .slider-wrap .pager { 
+  width: 100px; height: 10px;
+  position: absolute; left: 50%; bottom: 30px;
+  margin-left: -45px;
+ }
+ #mainview .slider-wrap .pager li {
+   width: 10px; height: 10px; float: left; margin-right: 10px; 
+ } 
+ #mainview .slider-wrap .pager li:last-child { margin-right: 0; }
+ #mainview .slider-wrap .pager li a {
+   display: block; width: 100%; height: 100%; 
+   border-radius: 50%; background-color: #fff; 
+   text-indent: -9999px; overflow: hidden;
+}
+
+/* slider-item Area Start */
+#mainview .slider-wrap .slider-items,
+#mainview .slider-wrap .slider-items>div { 
+  width: 100%; height: 100%;
+}
+#mainview .slider-wrap .slider-items{
+  background: url(../images/mainimg.png) no-repeat 0 0;
+}
+#mainview .slider-wrap .caption{ 
+  width: 300px; height: 189px; color: #fff;
+  position: absolute; left: 70px; top: 63px;
+}
+#mainview .slider-wrap .caption h2{
+  width: 100%; height: 42px;
+  font: 700 3em/42px 'Nanum Gothic', sans-serif;
+  margin-bottom: 21px;
+}#mainview .slider-wrap .caption p{ 
+  margin-bottom: 42px; 
+  width: 170px;
+}
+
+
+
+/* *** controls Area Start *** */
+#mainview .slider-wrap .controls .prev,
+#mainview .slider-wrap .controls .next { 
+  width: 40px; height: 40px; font-size: 40px;
+  color: #333;
+  position: absolute; top: 50%; margin-top: -20px;
+ }
+ #mainview .slider-wrap .controls .prev { left: -35px; }
+ #mainview .slider-wrap .controls .next { right: -60px; }
+
+
+
+/* *** Mainview Bottom Area Start *** */
+#mainview .m-bottom { height: 147px; }
+#mainview .m-bottom>div { width: 100%; }
+
+/* News Start */
+#mainview .m-bottom .news {height: 42px;}
+#mainview .m-bottom .news h3 {
+  width: 70px; height: 42px;
+  font: 700 1.4em/42px 'Nanum Gothic', sans-serif;
+  float: left;
+  margin-right: 30px;
+}
+#mainview .m-bottom .news ul {
+  width: 300px; height: 42px; float: left;
+}
+#mainview .m-bottom .news ul li {
+  width: 100%; height: 42px;
+  font: 400 1em/38px '맑은 고딕', sans-serif;
+}
+#mainview .m-bottom .news ul li a {
+  color: #333;
+}
+#mainview .m-bottom .news ul li a strong {
+  margin-left: 10px;
+}
+
+
+/* reserve-group Start */
+#mainview .m-bottom .reserve-group { 
+  height: 105px;
+  background-color: #fff;
+}
+#mainview .m-bottom .reserve-group ul {
+  width: 100%; height: 100%; display: flex; 
+}
+#mainview .m-bottom .reserve-group li {
+  flex: 1; height: 100%;
+  border-right: 1px solid rgb(236, 236, 236);
+}
+#mainview .m-bottom .reserve-group li:last-child {
+  border: 0;
+}
+#mainview .m-bottom .reserve-group li a {
+  display: block; width: 100%; height: 100%;
+  font: 700 1.2857em/105px 'Nanum Gothic', sans-serif;
+  text-indent: 30px;
+  position: relative;
+}
+#mainview .m-bottom .reserve-group li i {
+  font-size: 1.666em;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+/* ******* contents Area Start ******* */
+
+/* *** Event Area Start *** */
+#contents .event .container{padding: 21px 0;}
+#contents .event .slider-wrap,
+#contents .event .slider-wrap>div {width: 100%; height: 100%;}
+#contents .event .slider-wrap {
+  position: relative; background-color: #fff;
+}
+#contents .event .slider-wrap .slider-items {display: flex;}
+#contents .event .slider-wrap .slider-items>div { 
+  flex: 1; height: 100%;
+}
+#contents .event .slider-wrap .slider-items h4 { 
+  width: 100%; height: 42px;
+  font: 700 1.4em/38px '맑은 고딕', sans-serif;
+  text-indent: 10px;
+}
+
+/* Controls Area Start */
+#contents .event .controls .prev,
+#contents .event .controls .next { 
+  width: 40px; height: 40px; font-size: 40px;
+  color: #333;
+  position: absolute; top: 50%; margin-top: -20px;
+ }
+ #contents .event .controls .prev { left: -35px; }
+ #contents .event .controls .next { right: -60px; }
+
+
+/* *** Show Area Start *** */
+#contents .show .container { padding-top: 84px; }
+
+#contents .show .slider-wrap,
+#contents .show .slider-wrap .slider-items,
+#contents .show .slider-wrap .slider-item { 
+  width: 100%; height: 100%; 
+}
+
+#contents .show .slider-wrap { 
+  background-color: #e9e9e9; position: relative;
+}
+#contents .show .slider-item { display: flex; }
+#contents .show .slider-item .text-box { 
+  width: 470px; height: 336px; flex: 1;
+  padding: 63px 0 0 30px;
+ }
+ #contents .show .text-box h2 {
+   width: 100%; height: 63px; margin-bottom: 21px;
+   font: 700 2.3em/30px 'Nanum Gothic', sans-serif;
+   color: #2d2d2d;
+}
+#contents .show .text-box p { 
+  width: 100%; height: 63px; margin-bottom: 21px;
+}
+#contents .show .slider-item img { flex: 1; }
+
+/* *** controls Area Start *** */
+#contents .show .controls .prev,
+#contents .show .controls .next { 
+  width: 40px; height: 40px; font-size: 40px;
+  color: #333;
+  position: absolute; top: 50%; margin-top: -30px;
+ }
+ #contents .show .controls .prev { left: -35px; }
+ #contents .show .controls .next { right: -60px; }
+
+
+/* *** Service Area Start *** */
+#contents .service {
+  padding-top: 84px;
+}
+#contents .service .container {
+  height: 100%; background-color: #fff;
+}
+#contents .service .container h2{
+  width: 100%; height: 105px; margin-bottom: 21px;
+  font: 700 2.4em/105px 'Nanum Gothic', sans-serif;
+  text-indent: 25px;
+}
+
+#contents .service .sc-group {
+  width: 100%; height: 315px; display: flex;
+}
+#contents .service .sc-group>div { 
+  flex: 1; position: relative; 
+  overflow: hidden;
+  cursor: pointer;
+}
+#contents .service .sc-group>div img { 
+  width: 100%; height: 100%;
+}
+#contents .service .sc-group .caption { 
+  width: 100%; height: 630px; 
+  position: absolute; left: 0; top: 0;
+} 
+
+#contents .service .sc-group>div img,
+#contents .service .sc-group>div .caption {
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  -o-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+
+#contents .service .sc-group>div:hover img { 
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.2);
+}
+#contents .service .sc-group>div:hover .caption {
+  top: -315px;
+} 
+
+#contents .service .sc-group .caption>div {
+  width: 100%; height: 315px;
+} 
+#contents .service .sc-group .caption>div:first-child {
+  color: #fff;
+  font: 700 1.7em/315px 'Nanum Gothic', sans-serif;
+  text-align: center;
+}
+#contents .service .sc-group>div:last-child>div>div:first-child {
+  line-height: 1.5; padding-top: 130px; 
+}
+#contents .service .sc-group .caption>div:last-child {
+  background-color: rgba(12, 216, 195, 0.4);
+  text-align: center;
+  padding: 105px 25px 0;
+}
+#contents .service .sc-group>div:nth-child(3)>div>div:last-child{
+  padding-top: 120px;
+}
+#contents .service .sc-group .caption>div:last-child h3 {
+  font: 700 1.7em 'Nanum Gothic', sans-serif;
+  color: #222;
+  margin-bottom: 21px;
+}
+
+
+/* *** Family-group Area Start *** */
+#contents .family-group .container{padding: 84px 0 63px;}
+#contents .family-group .slider-wrap,
+#contents .family-group .slider-items {
+  width: 100%; height: 100%;
+}
+#contents .family-group .slider-wrap {position: relative;}
+#contents .family-group .slider-items {
+  display: flex; justify-content: space-between;
+}
+#contents .family-group .slider-items>div { 
+  width: 370px;
+ }
+#contents .family-group .slider-items>div img { 
+  width: 100%;
+}
+#contents .family-group .slider-items>div h4 { 
+  width: 100%; height: 42px;
+  font: 700 1.4em/42px '맑은 고딕', sans-serif;
+}
+
+/* *** controls Area Start *** */
+#contents .family-group .controls .prev,
+#contents .family-group .controls .next { 
+  width: 40px; height: 40px; font-size: 40px;
+  color: #333;
+  position: absolute; top: 50%; margin-top: -20px;
+ }
+ #contents .family-group .controls .prev { left: -35px; }
+ #contents .family-group .controls .next { right: -60px; }
+
+
+
+
+
+/* ******* Footer Area Start ******* */
+
+/* *** Footer Top Area Start *** */
+#footer .f-top .container {
+  padding-top: 42px;
+  position: relative;
+}
+
+/* f-menu Area Start */
+#footer .f-menu {
+  width: 750px;
+  height: 21px;
+  margin-bottom: 42px;
+}
+#footer .f-menu li {
+  height: 21px; float: left;
+}
+#footer .f-menu li a {
+  display: block;
+  height: 21px;
+  padding: 0 20px;
+  color: #fff;
+  position: relative;
+}
+#footer .f-menu li:first-child a {
+  padding-left: 0;
+}
+#footer .f-menu li a::after {
+  content: '';
+  display: block;
+  width: 1px;
+  height: 12px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+  background-color: #ccc;
+}
+#footer .f-menu li:last-child a::after {display: none;}
+#footer .f-menu li a:hover {color: #fc0; }
+
+
+
+/* SNS-Group Area Start */
+#footer .sns-group {
+  width: 120px;
+  height: 30px;
+  position: absolute;
+  right: 60px;
+  bottom: 42px;
+}
+#footer .sns-group a {
+  color: #fff;
+  font-size: 2.4em;
+  margin-right: 13px;
+}
+
+
+/* Address Area Start */
+#footer address {
+  width: 100%;
+  height: 42px;
+  color: #fff;
+  font-style: normal;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+#footer address span{
+  margin-right: 30px;
+}
+
+/* *** Footer Bottom Area Start *** */
+
+/* Copyright Logo */
+#footer .f-bottom .copylogo {
+  width: 168px; height: 63px;
+  padding-top: 20px;
+  float: left;
+}
+
+/* Copyright */
+#footer .f-bottom p{
+  width: 100%; height: 63px;
+  float: right;
+  color: #fff;
+  line-height: 63px;
+}
+
+
+
+
